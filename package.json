@@ -4,7 +4,8 @@
   "description": "Advent of Code 2023",
   "main": "index.js",
   "scripts": {
-    "day1": "node src/day1/index.js"
+    "day1first": "node src/day1/first.js",
+    "day1second": "node src/day1/second.js"
   },
   "keywords": [
     "advent",

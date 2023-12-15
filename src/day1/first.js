@@ -22,6 +22,7 @@ fs.readFile(path.resolve(__dirname, "input.txt"), "utf-8", (err, data) => {
         : `${numbers[0]}${numbers[0]}`;
 
     acc += Number(digits);
+
     return acc;
   }, 0);
 
