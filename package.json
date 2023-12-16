@@ -4,8 +4,8 @@
   "description": "Advent of Code 2023",
   "main": "index.js",
   "scripts": {
-    "day1first": "node src/day1/first.js",
-    "day1second": "node src/day1/second.js"
+    "day1first": "ts-node src/day1/first.ts",
+    "day1second": "ts-node src/day1/second.ts"
   },
   "keywords": [
     "advent",
@@ -16,6 +16,8 @@
   "author": "Marino Skalnik",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
