@@ -1,17 +1,16 @@
-const fs = require("node:fs");
-const path = require("node:path");
+import * as fs from "node:fs";
 
-fs.readFile(path.resolve(__dirname, "input.txt"), "utf-8", (err, data) => {
+fs.readFile("./input/day1.txt", "utf-8", (err, data) => {
   if (err) {
     console.error(err);
     return;
   }
 
   const result = data.split("\n").reduce((acc, curr) => {
-    const numbers = [];
+    const numbers: string[] = [];
 
     Array.from(curr).forEach((it) => {
-      if (!isNaN(it)) {
+      if (!isNaN(Number(it))) {
         numbers.push(it);
       }
     });

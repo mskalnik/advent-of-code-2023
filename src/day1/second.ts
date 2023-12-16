@@ -1,31 +1,30 @@
-const fs = require("node:fs");
-const path = require("node:path");
+import * as fs from "node:fs";
 
-const words = {
-  one: 1,
-  two: 2,
-  three: 3,
-  four: 4,
-  five: 5,
-  six: 6,
-  seven: 7,
-  eight: 8,
-  nine: 9,
+const words: Record<string, string> = {
+  one: "1",
+  two: "2",
+  three: "3",
+  four: "4",
+  five: "5",
+  six: "6",
+  seven: "7",
+  eight: "8",
+  nine: "9",
 };
 
-fs.readFile(path.resolve(__dirname, "input.txt"), "utf-8", (err, data) => {
+fs.readFile("./input/day1.txt", "utf-8", (err, data) => {
   if (err) {
     console.error(err);
     return;
   }
 
   const result = data.split("\n").reduce((acc, curr) => {
-    const numbers = [];
+    const numbers: string[] = [];
 
     for (let i = 0; i < curr.length; i++) {
       const tmp = curr.slice(i, curr.length);
 
-      if (!isNaN(tmp[0])) {
+      if (!isNaN(Number(tmp[0]))) {
         numbers.push(tmp[0]);
       }
 
